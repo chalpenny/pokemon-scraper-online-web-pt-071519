@@ -19,7 +19,7 @@ class Pokemon
     sql = "SELECT * FROM pokemon WHERE id = ?"
     pokemon_row = db.execute(sql, id).first
     #id = db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
-    Pokemon.new(id: pokemon_rom[0], name:, type:)
+    Pokemon.new(id: pokemon_row[0], name: pokemon_row[1], type: pokemon_row [3])
   end
 
 end
