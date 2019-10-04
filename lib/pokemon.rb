@@ -22,5 +22,5 @@ class Pokemon
 
     db.execute(sql, )
   end
-  
+
 end
