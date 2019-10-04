@@ -17,9 +17,9 @@ class Pokemon
 
   def self.find(id, db)
     sql = "SELECT * FROM pokemon WHERE id = ?"
-    db.execute(sql, id).first
-    id = db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
-    Pokemon.new(name, type)
+    pokemon_row = db.execute(sql, id).first
+    #id = db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
+    Pokemon.new(id: pokemon_rom[0], name:, type:)
   end
 
 end
