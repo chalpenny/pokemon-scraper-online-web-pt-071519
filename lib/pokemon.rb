@@ -20,7 +20,7 @@ class Pokemon
       SELECT * FROM pokemon WHERE id = ?
     SQL
 
-    db.execute(sql, id)
+    db.execute(sql)
     id = db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
     Pokemon.new(name, type)
   end
